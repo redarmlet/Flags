@@ -108,7 +108,7 @@ const mTime = document.getElementById('m-time');
 const mBonus = document.getElementById('m-bonus');
 const mFinal = document.getElementById('m-final');
 const btnSkip = document.getElementById('btn-skip');
-const btnHelp = document.getElementById('help');
+const btnHelp = document.getElementById('btn-info');
 
 const music = document.getElementById('audio');
 const AudioC = document.getElementById('correct');
@@ -184,26 +184,31 @@ function closeInfo(){
 window.addEventListener("keydown", function(event){
 
     if (event.key === "Escape") {
-        let libro = document.getElementById('book');
-        let info = document.getElementById('info');
-        if (libro.style.opacity === "1" && info.style.opacity === "1") {
-            openInfo();
-        }else {
-            skip();
-            closeBook();
-            closeInfo();
-        }
-    }if (event.key === "1") {
+            let libro = document.getElementById('book');
+            let info = document.getElementById('info');
+            if (libro.style.opacity === "1" && info.style.opacity === "1") {
+                openInfo();
+            }
+            else {
+                skip();
+                closeBook();
+                closeInfo();
+            }
+    }
+    if (event.key === "1") {
         this.openBook();
-    }if (event.key === "2") {
+    }
+    if (event.key === "2") {
         this.openInfo();
-    }if (event.key === "0") {
+    }
+    if (event.key === "0") {
         if (music.volume == 0){
             music.volume = 0.2;
         }else{
             music.volume = 0;
         }
-    }if (event.key === "9") {
+    }
+    if (event.key === "9") {
         if (AudioC.volume == 0){
             AudioC.volume = 0.05;
             AudioI.volume = 0.05;
@@ -217,7 +222,8 @@ window.addEventListener("keydown", function(event){
             AudioStart.volume = 0;
             AudioInfo.volume = 0;
         }
-    }if (event.key === "8") {
+    }
+    if (event.key === "8") {
         startGame();
     }
     

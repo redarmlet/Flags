@@ -3,6 +3,11 @@
     src: url(fonts/PressStart2P-Regular.ttf);
 }
 
+@keyframes flicker {
+    0% { opacity: 0.99; }
+    50% { opacity: 0.95; }
+    100% { opacity: 1; }
+}
 
 body {
     background-image: url('images/Badlands.webp');
@@ -11,53 +16,48 @@ body {
     background-position: center;
     background-attachment: fixed; /* Keeps background from scrolling */
     margin: 0;
-}
-
-h1 {
     font-family: pixel;
-    font-weight: 400;
-    color: rgb(255, 174, 0);
-    text-align: center;
+
+    .content {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 110px;
+
+        header{
+            .logo {
+                width: 300px;
+            }
+        }
+        main{
+            .coin {
+                width: 300px;
+                cursor: pointer;
+
+                &:hover {
+                    content: url('images/coin-gif.gif');
+                }
+            }
+        }
+        footer{
+            h1 {
+                font-weight: 400;
+                color: rgb(255, 174, 0);
+                text-align: center;
+            }
+            h3 {
+                font-weight: 400;
+                color: white;
+                text-align: center;
+                line-height: 2rem;
+            }
+        }
+    }
     
-
-}
-
-h3 {
-    font-family: pixel;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    line-height: 2rem;
-}
-
-.content-1 {
-
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    gap: 110px;
-}
-
-.logo {
-
-    width: 300px;
-
-}
-
-.earth {
-
-    width: 300px;
-    cursor: pointer;
-
-}
-.earth:hover {
-
-    content: url('images/coin-gif.gif');
-
 }
 body::after {
     content: "";
@@ -68,23 +68,11 @@ body::after {
     height: 100vh;
     z-index: 9999;
     pointer-events: none;
-
-    /* Líneas de escaneo clásicas de monitor */
     background: linear-gradient(
         rgba(255, 255, 255, 0) 50%,
-        rgba(0, 0, 0, 0.35) 50% /* Contraste ajustado para que se note sobre el espacio */
+        rgba(0, 0, 0, 0.35) 50%
     );
     background-size: 100% 4px;
-
-    /* Sombra oscura en los bordes para simular el tubo de rayos catódicos */
     box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.95);
-    
-    /* Efecto de inestabilidad eléctrica del tubo */
-    animation: parpadeoCRT 0.15s infinite;
-}
-
-@keyframes parpadeoCRT {
-    0% { opacity: 0.99; }
-    50% { opacity: 0.95; }
-    100% { opacity: 1; }
+    animation: flicker 0.15s infinite;
 }
