@@ -40,6 +40,8 @@ body {
     margin: 0;
     font-family: pixel;
     color: white;
+    height: 100vh;
+    overflow: hidden;
 
     #menu {
         position: absolute;
@@ -140,7 +142,7 @@ body {
                 left: 0;
                 padding: 0 10%;
                 box-sizing: border-box;
-                font-size: 30px;
+                font-size: 20px;
                 white-space: nowrap; 
             }
         }
