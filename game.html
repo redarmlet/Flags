@@ -13,6 +13,7 @@
         <div class="overlay"></div>
         <span id="m-title">GAME OVER</span>
         <div class="go-resume">
+            <span class="m-content" >CORRECT FLAGS<span  id="m-flags">.........</span></span>
             <span class="m-content" >SCORE<span          id="m-score">.................</span> </span>
             <span class="m-content" >TIME<span           id="m-time">..................</span></span>
             <span class="m-content" >BONUS<span          id="m-bonus">.................</span></span>
@@ -24,8 +25,109 @@
     <div class="content">
         <header>
 
+            <div id="menu-1">
+                <img src="images/paper.png" id="info" alt="info">
+                <div id="m-main">
+                    <p style="padding-bottom: 2rem;">COUNTRIES SELECTION:</p>
+                    <div class="checkboxes">
+                        <div>
+                            <input type="checkbox" name="Classic" id="cb-classic" checked>
+                            <label for="Classic">CLASSIC</label>
+                        </div>
+                        <div class="cb-continent">
+                            <div>
+                                <input type="checkbox" name="Africa" id="cb-africa">
+                                <label for="Africa">AFRICA</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="America" id="cb-america">
+                                <label for="America">AMERICA</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Asia" id="cb-asia">
+                                <label for="Asia">ASIA</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Europe" id="cb-europe">
+                                <label for="Europe">EUROPE</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="Oceania" id="cb-oceania">
+                                <label for="Oceania">OCEANIA</label>
+                            </div>
+                        </div>
+                    </div>
+                    <p> </p>
+                    <button     class="m1-btn"      id="btn-htp">HOW TO PLAY</button>
+                    <button     class="m1-btn"      id="btn-controls">CONTROLS</button>
+                    <button     class="m1-btn"      id="btn-sound">SOUND</button>
+                    <button     class="m1-btn"      id="btn-back">BACK TO GAME</button>
+                </div>
+                <div id="m-htp">
+                    <div>
+                        <h4>HOW TO PLAY</h4>
+                        <p>In this game, you have 3s to recognize each flag from your selected pool.</p>
+                        <br>
+                        <br>
+                        <p>ATTEMPTS:</p>
+                        <p>You can try up to 2 times per flag. Failing the second time will cost you 1 life (out of 3 total).</p>
+                        <br>
+                        <br>
+                        <p>THE BOOK:</p>
+                        <p>You can open it to check the list of all possible nations.</p>
+                        <p> </p>
+                    </div>
+                    <button class="mhtp-btn" id="btn-htp-back">BACK</button>
+                </div>
+                <div id="m-controls">
+                    <div>
+                        <h4>CONTROLS</h4>
+                        <p>1. Click the RED BUTTON or press 8 to start a new game.</p>
+                        <p> </p>
+                        <p>2. Type your answer and press ENTER to check.</p>
+                        <p> </p>
+                        <p>3. Click the BLUE BUTTON or press 1 to toggle the book.</p>
+                        <p> </p>
+                        <p>4. Click the top/left icon to open the menu or toggle pressing 2.</p>
+                        <p> </p>
+                        <p>5. Press 0 to toggle music.</p>
+                        <p> </p>
+                        <p>6. Press 9 to toggle sound effects</p>
+                        <p> </p>
+                        <p>7. Press ESC to open the main menu, or close any menu.</p>
+                        <p> </p>
+                    </div>
+                    <button class="mcontrols-btn" id="btn-controls-back">BACK</button>
+                </div>
+                <div id="m-sound">
+                    <h4>SOUND</h4>
+                    <div class="AudioCheckboxes">
+                        <div>
+                            <input type="checkbox" name="Music" id="cb-music">
+                            <label for="Music">Enable Music</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="Audio" id="cb-sfx">
+                            <label for="Audio">Enable SFX</label>
+                        </div>
+                    </div>
+                    <div class="sliders">
+                        <div>
+                            <p>Music Volume</p>
+                            <input class="ranges" type="range" id="musicRange" min="0" max="10" value="5">
+                        </div>
+                        <div>
+                            <p>Sound effects volume</p>
+                            <input class="ranges" type="range" id="sfxRange" min="0" max="10" value="5">
+                        </div>
+                    </div>
+                    
+                    <button class="audio-btn" id="btn-audio-back">BACK</button>
+                </div>
+            </div>
             <button id="btn-info"><img src="images/help.webp" alt="?"></button>
-            <img src="images/info.png" id="info" alt="info">
+            
 
             <div class="scoreboard">
                 <span>LIVES: <span          id="lives">3</span></span>
