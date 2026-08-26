@@ -8,7 +8,13 @@
     50% { opacity: 0.95; }
     100% { opacity: 1; }
 }
-
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(360deg);
+    }
+}
 button {
     font-family: inherit;
     color: inherit;
@@ -42,6 +48,26 @@ body {
     color: white;
     height: 100vh;
     overflow: hidden;
+
+    #menu-loading{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        z-index: 200;
+        background-color: rgba(0, 0, 0, 1);
+        font-size: 2vw;
+
+        #loadingCoin{
+
+            animation: rotate 5s linear infinite;
+            width: 10vw;
+            z-index: 300 !important;
+        }
+    }
 
     #menu {
         position: absolute;
@@ -319,8 +345,7 @@ body {
 
             .flag-container {
                 position: absolute;
-                width: 50%;
-                height: 60%;
+                width: 55vw;
                 left: 50%;
                 bottom: 60%;
                 transform: translate(-50%, 50%);

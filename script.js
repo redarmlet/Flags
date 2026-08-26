@@ -231,6 +231,7 @@ const mTime = document.getElementById('m-time');
 const mBonus = document.getElementById('m-bonus');
 const mFinal = document.getElementById('m-final');
 const mFlags = document.getElementById('m-flags');
+const mLoading = document.getElementById('menu-loading')
 const btnSkip = document.getElementById('btn-skip');
 const btnHelp = document.getElementById('btn-info');
 const btnBack = document.getElementById('btn-back');
@@ -314,6 +315,40 @@ AudioGameover.volume = AudioGameover.defaultVolume * (rangeSfx / 10);
 unmuteAudio();
 unmuteMusic();
 
+const imagePaths = [
+  'images/Background.webp', 'images/Badlands.webp', 'images/book.png',
+  'images/book-off.webp', 'images/book-on.webp', 'images/book-p1.png',
+  'images/book-p2.png', 'images/book-p3.png', 'images/book-p4.png',
+  'images/book-p5.png', 'images/book-p6.png', 'images/book-p7.png',
+  'images/book-p8.png', 'images/book-p9.png', 'images/border.webp',
+  'images/border-0.webp', 'images/border-1.webp', 'images/coin.gif',
+  'images/coin.webp', 'images/coin-gif.gif', 'images/flag.gif',
+  'images/gem.webp', 'images/gem-on.webp', 'images/help.webp',
+  'images/info.png', 'images/logo.webp', 'images/ornament.webp',
+  'images/paper.png', 'images/UI-00.webp'
+];
+
+function preloadImages() {
+  if (imagePaths.length === 0) return;
+
+  openLoading();
+
+  const promises = imagePaths.map(path => new Promise(resolve => {
+    const img = new Image();
+    
+    img.onload = resolve;
+    img.onerror = resolve; 
+    
+    img.src = path;
+  }));
+  Promise.all(promises).then(() => {
+    closeLoading();
+    
+  });
+}
+
+document.addEventListener('DOMContentLoaded', preloadImages);
+
 function changePage(){
     if (actualPage === 1){
         bookPage.src = 'images/book-p1.png';
@@ -392,6 +427,21 @@ function prevPage(){
     }
 }
 
+function openLoading(){
+    mLoading.style.opacity= '1';
+    mLoading.style.pointerEvents= 'auto';
+}
+function closeLoading(){
+    mLoading.style.opacity= '0';
+    mLoading.style.pointerEvents= 'none';
+}
+function toggleLoading(){
+    if(mLoading.style.opacity === '1'){
+        closeLoading();
+    }else{
+        openLoading();
+    }
+}
 musicRange.addEventListener('input', function(){
     const range = parseInt(musicRange.value, 10);
     music.volume = music.defaultVolume * (range / 10);
