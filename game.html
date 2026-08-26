@@ -140,7 +140,6 @@
 
         <main>
             
-            <span   id="remain"> REMAINING: <span id="remaining">00</span></span>
             <div class="flag-container">
                 <img    id="border"         src="images/border.webp"        alt="border">
                 <img    id="flag-display"   src="images/flags/xx.webp"      alt="flag-display">
@@ -152,10 +151,24 @@
         </main>
 
         <footer>
-
+            <span   id="remain"> REMAINING: <span id="remaining">00</span></span>
             <input type="text" id="country-input" placeholder="" autocomplete="off" disabled>
             <img        src="images/UI-00.webp"     class="ui-inputBar"     alt="UI" >
-            <img        src="images/book.png"       id="book"               alt="book">
+
+            <div id="m-book">
+
+                <div class="pages">
+                    <button id="book-close-btn">X</button>
+                    <button id="book-next-btn">→</button>
+                    <button id="book-back-btn">←</button>
+                    <button id="book-af-btn"></button>
+                    <button id="book-am-btn"></button>
+                    <button id="book-as-btn"></button>
+                    <button id="book-eu-btn"></button>
+                    <button id="book-oc-btn"></button>
+                    <img id="book-pg" src="images/book-p1.png" alt="">
+                </div>
+            </div>
 
             <button     id="btn-play"               class="btn-play">
                 <img    src="images/gem.webp"                               alt="btn-play">

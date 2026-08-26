@@ -204,6 +204,7 @@ let lives = 3;
 let time = 180;
 let intervalo = null;
 let banderasCorrectas = 0;
+let actualPage = 1;
 
 let highScore = localStorage.getItem('flagsHighScore') || 0;
 let currentCountry = null;
@@ -220,7 +221,8 @@ const displayRemaining = document.getElementById('remaining');
 
 const border = document.getElementById('border');
 const btnBook = document.getElementById('btn-book');
-const book = document.getElementById('book');
+const book = document.getElementById('m-book');
+const bookPage = document.getElementById('book-pg');
 
 const menu = document.getElementById('menu');
 const mTitle = document.getElementById('m-title');
@@ -238,6 +240,14 @@ const btnSound = document.getElementById('btn-sound');
 const btnBackSound = document.getElementById('btn-audio-back');
 const btnControls = document.getElementById('btn-controls');
 const btnBackControls = document.getElementById('btn-controls-back');
+const btnBackBook = document.getElementById('book-back-btn');
+const btnNextBook = document.getElementById('book-next-btn');
+const btnAF = document.getElementById('book-af-btn');
+const btnAM = document.getElementById('book-am-btn');
+const btnAS = document.getElementById('book-as-btn');
+const btnEU = document.getElementById('book-eu-btn');
+const btnOC = document.getElementById('book-oc-btn');
+const btnCloseBook = document.getElementById('book-close-btn');
 
 const music = document.getElementById('audio');
 const AudioC = document.getElementById('correct');
@@ -262,9 +272,9 @@ const rangeSfx = parseInt(sfxRange.value, 10);
 displayHighScore.textContent = String(highScore).padStart(6, '0');
 
 btnPlay.addEventListener('click', startGame);
-btnBook.addEventListener('click', openBook);
+btnBook.addEventListener('click', toggleBook);
 btnSkip.addEventListener('click', skip);
-btnHelp.addEventListener('click', () => { closeAll(); openInfo(); });
+btnHelp.addEventListener('click', () => { closeAll(); toggleInfo(); });
 btnBack.addEventListener('click', closeInfo);
 btnBackHtp.addEventListener('click', closeHtp);
 btnHtp.addEventListener('click', openHtp);
@@ -272,6 +282,14 @@ btnSound.addEventListener('click', openSound);
 btnBackSound.addEventListener('click', closeSound);
 btnControls.addEventListener('click', openControls);
 btnBackControls.addEventListener('click', closeControls);
+btnBackBook.addEventListener('click', prevPage);
+btnNextBook.addEventListener('click', nextPage);
+btnAF.addEventListener('click', () => { actualPage = 1; changePage(); });
+btnAM.addEventListener('click', () => { actualPage = 3; changePage(); });
+btnAS.addEventListener('click', () => { actualPage = 5; changePage(); });
+btnEU.addEventListener('click', () => { actualPage = 7; changePage(); });
+btnOC.addEventListener('click', () => { actualPage = 9; changePage(); });
+btnCloseBook.addEventListener('click', closeBook);
 
 music.defaultVolume = 0.8; 
 AudioC.defaultVolume = 0.2;
@@ -295,6 +313,84 @@ AudioGameover.volume = AudioGameover.defaultVolume * (rangeSfx / 10);
 
 unmuteAudio();
 unmuteMusic();
+
+function changePage(){
+    if (actualPage === 1){
+        bookPage.src = 'images/book-p1.png';
+        btnBackBook.style.opacity = 0;
+        btnBackBook.style.pointerEvents = 'none';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 2){
+        bookPage.src = 'images/book-p2.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 3){
+        bookPage.src = 'images/book-p3.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 4){
+        bookPage.src = 'images/book-p4.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 5){
+        bookPage.src = 'images/book-p5.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 6){
+        bookPage.src = 'images/book-p6.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 7){
+        bookPage.src = 'images/book-p7.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 8){
+        bookPage.src = 'images/book-p8.png';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+        btnNextBook.style.opacity = 1;
+        btnNextBook.style.pointerEvents = 'inherit';
+    }
+    else if (actualPage === 9){
+        bookPage.src = 'images/book-p9.png';
+        btnNextBook.style.opacity = 0;
+        btnNextBook.style.pointerEvents = 'none';
+        btnBackBook.style.opacity = 1;
+        btnBackBook.style.pointerEvents = 'inherit';
+    }
+}
+function nextPage(){
+    if (actualPage < 9){
+        actualPage ++;
+        changePage();
+    }
+}
+function prevPage(){
+    if (actualPage > 1){
+        actualPage --;
+        changePage();
+    }
+}
 
 musicRange.addEventListener('input', function(){
     const range = parseInt(musicRange.value, 10);
@@ -416,40 +512,41 @@ function closeSound(){
     sound.style.pointerEvents = "none";
 }
 
-function openBook() {
-    let libro = document.getElementById('book');
+function toggleBook() {
+    let libro = document.getElementById('m-book');
     
     if (libro.style.opacity === "1") {
         closeBook();
     } else {
-        oBook();
+        openBook();
     }
 }
-function oBook(){
+function openBook(){
     AudioBook.play();
-    let libro = document.getElementById('book');
+    let libro = document.getElementById('m-book');
     libro.style.opacity = "1";
-    border.style.opacity ="0";
+    libro.style.pointerEvents = 'auto';
+
 }
 function closeBook(){
-    let libro = document.getElementById('book');
+    let libro = document.getElementById('m-book');
     libro.style.opacity = "0";
-    border.style.opacity ="1";
+    libro.style.pointerEvents = 'none';
 
 }
 
-function openInfo() {
+function toggleInfo() {
     
     let info = document.getElementById('menu-1');
 
     if (info.style.opacity === "0") {
-        oInfo();
+        openInfo();
     } else {
         closeInfo();
     }
 
 }
-function oInfo(){
+function openInfo(){
     
     AudioInfo.play();
     let info = document.getElementById('menu-1');
@@ -467,33 +564,34 @@ function closeAll(){
     closeControls();
     closeHtp();
     closeSound();
-
 }
 window.addEventListener("keydown", function(event){
 
     if (event.key === "Escape") {
-            let libro = document.getElementById('book');
-            let info = document.getElementById('menu-1');
-            if (libro.style.opacity === "1" && info.style.opacity === "1") {
-                closeAll();
-                openInfo();
-            }
-            else if (libro.style.opacity === "0" && info.style.opacity === "0"){
-                closeAll();
-                openInfo();
-            }
-            else {
-                skip();
-                closeBook();
-                closeInfo();
-            }
+        let libro = document.getElementById('m-book');
+        let info = document.getElementById('menu-1');
+        let go = document.getElementById('menu');
+
+        if (libro.style.opacity === "1" && info.style.opacity === "1") {
+            closeAll();
+            toggleInfo();
+        }
+        else if (libro.style.opacity === "0" && info.style.opacity === "0"){
+            closeAll();
+            toggleInfo();
+        }
+        else {
+            skip();
+            closeBook();
+            closeInfo();
+        }
     }
     if (event.key === "1") {
-        this.openBook();
+        this.toggleBook();
     }
     if (event.key === "2") {
         closeAll();
-        this.openInfo();
+        this.toggleInfo();
     }
     if (event.key === "0") {
         if (music.muted){
@@ -607,7 +705,7 @@ function startGame() {
         
         startTime();
         nextFlag();
-        displayRemaining.textContent = String(availableCountries.length)
+        displayRemaining.textContent = String((availableCountries.length)+1)
 
     }, 2400);
     
@@ -719,7 +817,7 @@ function checkAnswer() {
             border.src ="images/border.webp";;
         }, 300);
     }
-    displayRemaining.textContent = String(availableCountries.length)
+    displayRemaining.textContent = String((availableCountries.length)+1)
 }
 
 function gameOver() {
@@ -728,10 +826,18 @@ function gameOver() {
     totalCountries = paises.length;
 
     music.pause();
-    if (availableCountries.length === 0 && lives > 0) {
-    mTitle.textContent = 'HAIL MASTER OF FLAGS';
-    AudioMaster.play();
-    } else {
+    if (availableCountries.length === 0 && lives === 3 ) {
+        mTitle.textContent = 'HAIL MASTER OF FLAGS!';
+        AudioMaster.play();
+    } else if (availableCountries.length === 0 && lives < 0 ){
+        if (score > highScore) {
+            mTitle.textContent = 'IMPRESSIVE NEW HIGHSCORE';
+            AudioHighScore.play();
+        } else {
+            mTitle.textContent = '${3 - lives} LIVES AWAY FROM GLORY';
+            AudioGameover.play();
+        }
+    }else {
         if (score > highScore) {
             mTitle.textContent = 'NEW HIGHSCORE';
             AudioHighScore.play();

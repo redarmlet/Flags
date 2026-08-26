@@ -66,7 +66,8 @@ body {
         }
 
         #m-title {
-            font-size: 500%;
+            text-align: center;
+            font-size: 10vh;
             padding: 5%;
             z-index: 60;
         }
@@ -108,16 +109,17 @@ body {
             #btn-info {
                 z-index: 40;
                 position: absolute;
-                width: 50px;
+                width: 3vw;
                 top: 0.5%;
                 left: 0.5%;
-                padding: 5px;
+                padding: auto;
                 background: none;
                 border: none;
                 cursor: pointer;
 
                 img {
                     width: 100%;
+                    
                 }
             }
 
@@ -133,8 +135,8 @@ body {
                 align-items: center;
                 z-index: 100;
                 background-color: rgba(0, 0, 0, 0.6) !important;
-                opacity: 1;
-                pointer-events: auto;
+                opacity: 0;
+                pointer-events: none;
 
                 #info {
                     z-index: 110;
@@ -305,7 +307,7 @@ body {
                 left: 0;
                 padding: 0 10%;
                 box-sizing: border-box;
-                font-size: 20px;
+                font-size: 1vw;
                 white-space: nowrap; 
             }
         }
@@ -314,23 +316,6 @@ body {
             font-weight: normal;
             color: rgb(255, 174, 0);
             text-align: center;
-
-            #remain {
-                position: absolute;
-                z-index: 20;
-                left: 29.6%;
-                width: 40.6%;
-                bottom: 4.8%;
-                height: auto;
-                display: block;
-                pointer-events: none;
-                opacity: 50%;
-                font-size: 114%;
-                
-                #remaining {
-                    left: 46.7%;
-                }
-            }
 
             .flag-container {
                 position: absolute;
@@ -387,6 +372,20 @@ body {
             width: 100%; 
             z-index: 10;
 
+            #remain {
+                position: absolute;
+                z-index: 20 ;
+                width: 40.6%;
+                left: 44.7%;
+                bottom: 16%;
+                pointer-events: none;
+                opacity: 50%;
+                font-size: .8vw;
+                color: rgb(255, 174, 0);
+                #remaining {
+                    left: 46.7%;
+                }
+            }
             #country-input {
                 position: absolute;
                 z-index: 20;
@@ -410,7 +409,186 @@ body {
                 height: auto; 
                 display: block;
             }
+            #m-book{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 100;
+                background-color: rgba(0, 0, 0, 0.6) !important;
+                opacity: 0;
+                pointer-events: none;
+
+                .pages {
+                    position: absolute;
+                    color: black;
+                    z-index: 110;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 65%;
+                    opacity: inherit;
+                    pointer-events: inherit;
+
+                    #book-close-btn{
+                        width: 3%;
+                        height: 3%;
+                        right: 11%;
+                        top: 11%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        color: rgb(131, 112, 90);
+                        border: none;
+                        background: none;
+
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-next-btn{
+                        width: 3%;
+                        height: 3%;
+                        right: 11.5%;
+                        bottom: 14.5%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        color: rgb(131, 112, 90);
+                        border: none;
+                        background: none;
+
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-back-btn{
+                        width: 3%;
+                        height: 3%;
+                        left: 11.5%;
+                        bottom: 14.5%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: 0;
+                        pointer-events: none;
+                        color: rgb(131, 112, 90);
+                        border: none;
+                        background: none;
+
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-af-btn{
+                        width: 10%;
+                        height: 8%;
+                        right: 1%;
+                        top: 25%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        background: none;
+                        border: none;
+
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-am-btn{
+                        width: 10%;
+                        height: 8%;
+                        right: 1%;
+                        top: 35.5%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        background: none;
+                        border: none;
+
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-as-btn{
+                        width: 10%;
+                        height: 8%;
+                        right: 1%;
+                        top: 46%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        background: none;
+                        border: none;
+                        
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-eu-btn{
+                        width: 10%;
+                        height: 8%;
+                        right: 1%;
+                        bottom: 35.5%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        background: none;
+                        border: none;
+                        
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-oc-btn{
+                        width: 10%;
+                        height: 8%;
+                        right: 1%;
+                        bottom: 25%;
+                        position: absolute;
+                        z-index: 130;
+                        font-size: 1.5vw;
+                        opacity: inherit;
+                        pointer-events: inherit;
+                        background: none;
+                        border: none;
+                        
+                        &:hover{
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    #book-pg{
+                        width: 100%;
+                        pointer-events: none;
+                    }
+                }
+                
+            }
             #book {
                 position: absolute;
                 z-index: 59;

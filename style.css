@@ -14,9 +14,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; /* Keeps background from scrolling */
+    background-attachment: fixed;
     margin: 0;
     font-family: pixel;
+    overflow: hidden;
 
     .content {
         width: 90%;
@@ -25,19 +26,17 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
-        gap: 110px;
 
         header{
             .logo {
-                width: 300px;
+                width: 40vh;
             }
         }
         main{
             .coin {
-                width: 300px;
+                width: 20vh;
                 cursor: pointer;
-
+                padding: 15vmin;
                 &:hover {
                     content: url('images/coin-gif.gif');
                 }
@@ -48,12 +47,15 @@ body {
                 font-weight: 400;
                 color: rgb(255, 174, 0);
                 text-align: center;
+                line-height: 2rem;
+                font-size: 4vh;
             }
             h3 {
                 font-weight: 400;
                 color: white;
                 text-align: center;
                 line-height: 2rem;
+                font-size: 2vh;
             }
         }
     }
