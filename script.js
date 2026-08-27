@@ -331,8 +331,6 @@ const imagePaths = [
 function preloadImages() {
   if (imagePaths.length === 0) return;
 
-  openLoading();
-
   const promises = imagePaths.map(path => new Promise(resolve => {
     const img = new Image();
     
