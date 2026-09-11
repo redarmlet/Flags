@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
     <title>FLAGS - Game</title>
+    <link rel="icon" type="ico" href="images/fav.ico">
     <link rel="stylesheet" href="style-1.css">
 </head>
 <body>
-    <div id="menu-loading" style="opacity: 0; pointer-events: none;">
+    <div id="menu-loading" style="opacity: 1; pointer-events: auto;">
         <p>LOADING PLEASE WAIT</p>
         <img id="loadingCoin" src="images/coin-gif.gif" alt="loading">
     </div>
@@ -20,6 +21,7 @@
             <span class="m-content" >SCORE<span          id="m-score">.................</span> </span>
             <span class="m-content" >TIME<span           id="m-time">..................</span></span>
             <span class="m-content" >BONUS<span          id="m-bonus">.................</span></span>
+            <span class="m-content"> </span>
             <span class="m-content" >FINAL SCORE<span    id="m-final">...........</span></span>
         </div>
         <button id="btn-skip">>></button>
@@ -31,7 +33,7 @@
             <div id="menu-1">
                 <img src="images/paper.png" id="info" alt="info">
                 <div id="m-main">
-                    <p style="padding-bottom: 2rem;">COUNTRIES SELECTION:</p>
+                    <p>COUNTRIES SELECTION:</p>
                     <div class="checkboxes">
                         <div>
                             <input type="checkbox" name="Classic" id="cb-classic" checked>
@@ -132,7 +134,7 @@
             <button id="btn-info"><img src="images/help.webp" alt="?"></button>
             
 
-            <div class="scoreboard">
+            <div class="1">
                 <span>LIVES: <span          id="lives">3</span></span>
                 <span>SCORE: <span          id="score">0</span></span>
                 <span>HIGH SCORE: <span     id="high-score">000000</span></span>

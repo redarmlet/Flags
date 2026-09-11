@@ -197,8 +197,6 @@ const countries = [
     { name: "zimbabwe", code: "zw", difficulty: 3, continent: "Africa", classic: "no" }
 ];
 
-
-
 let score = 0;
 let lives = 3;
 let time = 180;
@@ -209,6 +207,8 @@ let actualPage = 1;
 let highScore = localStorage.getItem('flagsHighScore') || 0;
 let currentCountry = null;
 let availableCountries = [];
+let Reebot = false;
+let shut = false;
 
 const btnPlay = document.getElementById('btn-play');
 const flagImg = document.getElementById('flag-display');
@@ -331,7 +331,7 @@ const imagePaths = [
 function preloadImages() {
   if (imagePaths.length === 0) return;
 
-  openLoading();
+  
 
   const promises = imagePaths.map(path => new Promise(resolve => {
     const img = new Image();
@@ -348,6 +348,26 @@ function preloadImages() {
 }
 
 document.addEventListener('DOMContentLoaded', preloadImages);
+
+function shutAudio(){
+    AudioC.pause();
+    AudioI.pause();
+    AudioBook.pause();
+    AudioStart.pause();
+    AudioInfo.pause();
+    AudioMaster.pause();
+    AudioHighScore.pause();
+    AudioGameover.pause();
+    AudioC.currentTime = 0;
+    AudioI.currentTime = 0; 
+    AudioBook.currentTime = 0;
+    AudioStart.currentTime = 0;
+    AudioInfo.currentTime = 0;
+    AudioMaster.currentTime = 0;
+    AudioHighScore.currentTime = 0;
+    AudioGameover.currentTime = 0;
+}
+
 
 function changePage(){
     if (actualPage === 1){
@@ -591,8 +611,10 @@ function toggleInfo() {
 
     if (info.style.opacity === "0") {
         openInfo();
-    } else {
+    } else if (info.style.opacity === "1"){
         closeInfo();
+    } else {
+        openInfo();
     }
 
 }
@@ -626,6 +648,12 @@ window.addEventListener("keydown", function(event){
             closeAll();
             toggleInfo();
         }
+        else if (libro.style.opacity === "1" && info.style.opacity === "0" && menu.style.opacity === "1"){
+            skip();
+        }
+        else if (libro.style.opacity === "0" && info.style.opacity === "0" && menu.style.opacity === "1"){
+            skip();
+        }
         else if (libro.style.opacity === "0" && info.style.opacity === "0"){
             closeAll();
             toggleInfo();
@@ -658,7 +686,20 @@ window.addEventListener("keydown", function(event){
         }
     }
     if (event.key === "8") {
+        if (Reebot) return;
+        Reebot = true;
         startGame();
+        setTimeout(() => {
+            Reebot = false;
+        }, 400); 
+    }
+    if (event.key === "7") {
+        if (shut) return;
+        shut = true;
+        gameShut();
+        setTimeout(() => {
+            shut = false;
+        }, 400); 
     }
     
 });
@@ -731,11 +772,13 @@ function getGameCountries() {
 }
 
 function startGame() {
-    
+    shutAudio();
+    gameShut();
     banderasCorrectas = 0;
     closeBook();
     closeInfo();
     skip();
+    music.currentTime = 0;
     music.play();
     AudioStart.play();
 
@@ -877,14 +920,22 @@ function gameOver() {
 
     music.pause();
     if (availableCountries.length === 0 && lives === 3 ) {
+        displayRemaining.textContent = String("0")
         mTitle.textContent = 'HAIL MASTER OF FLAGS!';
         AudioMaster.play();
-    } else if (availableCountries.length === 0 && lives < 0 ){
+    } else if (availableCountries.length === 0 && lives < 3 ){
         if (score > highScore) {
+            displayRemaining.textContent = String("0")
             mTitle.textContent = 'IMPRESSIVE NEW HIGHSCORE';
             AudioHighScore.play();
         } else {
-            mTitle.textContent = '${3 - lives} LIVES AWAY FROM GLORY';
+            displayRemaining.textContent = String("0")
+            if(lives === 1){
+                mTitle.textContent = '1 LIFE AWAY FROM GLORY';
+            }else{
+                mTitle.textContent = (3-lives) + ' LIVES AWAY FROM GLORY';
+            }
+            
             AudioGameover.play();
         }
     }else {
@@ -937,4 +988,21 @@ function gameOver() {
     
     time = 0;
     displayTime.textContent = String(time).padStart(6, '0');
+}
+
+function gameShut() {
+    shutAudio();
+    music.pause();
+    inputCountry.disabled = true;
+    inputCountry.value = '';
+    inputCountry.placeholder = 'ENTER COUNTRY';
+    flagImg.src = 'images/flags/xx.webp'; 
+    btnPlay.disabled = false; 
+    time = 0;
+    stopTime();
+    lives = 0;
+    availableCountries = 0;
+    displayTime.textContent = String(time).padStart(6, '0');
+    displayRemaining.textContent = String("0")
+    displayScore.textContent = String("0").padStart(6, '0');
 }

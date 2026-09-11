@@ -46,7 +46,7 @@ body {
     margin: 0;
     font-family: pixel;
     color: white;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
 
     #menu-loading{
@@ -93,8 +93,9 @@ body {
 
         #m-title {
             text-align: center;
-            font-size: 10vh;
-            padding: 5%;
+            font-size: 10vmin;
+            margin-top: 0%;
+            padding: 10vh;
             z-index: 60;
         }
 
@@ -105,20 +106,21 @@ body {
             z-index: 60;
 
             .m-content {
-                font-size: 200%;
-                padding: 2rem 0;
+                font-size: 3vmin;
+                padding: 2vmin 0;
                 white-space: nowrap; 
             }
         }
 
         #btn-skip {
             bottom: 10%;
-            font-size: 600%;
+            font-size: 10vmin;
             background: transparent;
             border: none;
-            padding: 5% 0;
+            padding: 12vh 0;
             cursor: pointer;
             z-index: 60;
+            outline: 2px red;
         }
     }
 
@@ -163,7 +165,34 @@ body {
                 background-color: rgba(0, 0, 0, 0.6) !important;
                 opacity: 0;
                 pointer-events: none;
-
+                transition: opacity .2s ease;
+                img{
+                    transition: opacity .2s ease;
+                }
+                input[type="checkbox"] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    
+                    width: 2vw;
+                    height: 2vw;
+                    background-color: rgb(240, 231, 212);
+                    border-radius: 10%;
+                    cursor: pointer;
+                    display: inline-grid;
+                    place-content: center;
+                    transition: border-radius,background-color 1s ease;
+                }
+                input[type="checkbox"]:checked {
+                    transition: border-radius,background-color 1s ease;
+                    border-radius: 100%;
+                    background-color: rgb(131, 112, 90);
+                }
+                input[type="checkbox"]:checked::before {
+                    transition: content 6s ease;
+                    content: "✔";
+                    color: white;
+                    font-size: 1.5vw;
+                }
                 #info {
                     z-index: 110;
                     position: absolute;
@@ -183,40 +212,36 @@ body {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 1rem;
-                    width: 45%;
-                    font-size: 30px;
+                    width: 40vw;
+                    height: 30vw;
+                    font-size: 1vw;
                     opacity: 1;
                     pointer-events: inherit;
-
+                    padding: 0%;
                     .m1-btn{
-                        font-size: 100%;
+                        font-size: 1vw;
                         background: none;
                         border: none;
                         opacity: inherit;
                         pointer-events: inherit;
                         color: rgb(95, 87, 65);
+                        padding: .4vw;
                         &:hover{
                             color: black;
                             cursor: pointer;
                         }
-                    }
-                    &p{
-                        opacity: inherit;
-                        pointer-events: inherit;
-                        font-size: 80%;
-                        color: rgb(95, 87, 65);
-                        padding: 1rem;
                     }
                     .checkboxes{
                         opacity: inherit;
                         pointer-events: inherit;
                         display: flex;
                         flex-direction: column;
-                        font-size: 30%;
+                        font-size: 1vw;
                         color: black;
-                        transform: scale(2);
+                        padding: 0%;
+                        
                     }
+                    
                 }   
                 #m-htp{
                     position: absolute;
@@ -225,9 +250,9 @@ body {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 2rem;
+                    gap: 1vw;
                     width: 40%;
-                    font-size: 130%;
+                    font-size: 1vw;
                     opacity: 0;
                     pointer-events: none;
                     
@@ -256,8 +281,8 @@ body {
                     align-items: center;
                     gap: 1rem;
                     width: 40%;
-                    font-size: 100%;
-                    line-height: 2rem;
+                    font-size: 1vw;
+                    line-height: 1.3vw;
                     opacity: 0;
                     pointer-events: none;
                     
@@ -284,20 +309,20 @@ body {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 2rem;
-                    width: 40%;
-                    font-size: 200%;
+                    gap: 1vw;
+                    width: 40vw;
+                    font-size: 2vw;
                     opacity: 0;
                     pointer-events: none;
 
                     .audio-btn{
-                        font-size: 100%;
+                        font-size: 2vw;
                         background: none;
                         border: none;
                         opacity: inherit;
                         pointer-events: inherit;
                         color: rgb(95, 87, 65);
-                        padding: 1rem;
+                        padding: 1vw;
                         &:hover{
                             color: black;
                             cursor: pointer;
@@ -308,15 +333,15 @@ body {
                         pointer-events: inherit;
                         display: flex;
                         flex-direction: column;
-                        font-size: 30%;
+                        font-size: 1vw;
                         color: black;
-                        transform: scale(2);
                     }
                     .sliders{
-                        font-size: 50%;
+                        font-size: 1vw;
                         
                         .ranges{
-                            width: 100%; 
+                            width: 30vw; 
+                            height: 1vw;
                         }
                     }
                 }
@@ -448,7 +473,10 @@ body {
                 background-color: rgba(0, 0, 0, 0.6) !important;
                 opacity: 0;
                 pointer-events: none;
-
+                transition: opacity .1s ease;
+                #book-pg{
+                    transition: opacity .1s ease;
+                }
                 .pages {
                     position: absolute;
                     color: black;
@@ -669,6 +697,7 @@ body {
                 }
 
                 &:hover img {
+                    transition: all 2s ease;
                     content: url('images/book-on.webp');
                     cursor: pointer;
                 }
@@ -693,4 +722,81 @@ body::after {
     background-size: 100% 4px;
     box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.95);
     animation: flicker 0.15s infinite;
+}
+
+@media (max-width: 768px) {
+
+    .flag-container {
+        width: 100dvw !important;
+    }
+    .flag-container img {
+        width: 100% !important;
+    }
+    .flag-container #flag-display {
+        width: 79% !important;
+    }
+    .flag-container #border{
+        width: 100dvw !important;
+    }
+    .flag-container #ornament {
+        display: none;
+    }
+    .flag-container #ornament2 {
+        display: none;
+    }
+    #info{
+        width: 150% !important;
+        transform: translate(-50%,-50%) rotate(90deg) !important;
+    }
+    #btn-info{
+        width: 12dvw !important;
+    }
+    p{
+        font-size: 4dvw !important;
+    }
+    #m-main {
+        width: 90dvw !important;
+        height: 100dvw !important;
+        .m1-btn{
+            font-size: 5vw !important;
+        }
+        .checkboxes{
+            font-size: 5vw !important;
+        }
+        
+    }   
+    input[type="checkbox"] {
+        width: 8vw !important;
+        height: 8vw !important;
+    }
+    input[type="checkbox"]:checked::before {
+        font-size: 5dvw !important;
+    }
+    .audio-btn{
+        font-size: 5dvw !important;
+        padding: 10dvw !important;
+    }
+    #m-sound {
+        gap: 1dvw !important;
+        width: 80dvw !important;
+        font-size: 8dvw !important;
+    }
+    .AudioCheckboxes{
+        font-size: 5dvw !important;
+    }
+    .sliders{
+        .ranges{
+            width: 80dvw !important; 
+        }
+    }
+    .scoreboard{
+        width: 50% !important;
+        top: 1% !important;
+        left: 3% !important;
+        flex-direction: column;
+        font-size: 2dvw !important;
+    }
+    .pages{
+        width: 100% !important;
+    }
 }
