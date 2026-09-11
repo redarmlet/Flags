@@ -793,7 +793,7 @@ body::after {
         width: 50% !important;
         top: 1% !important;
         left: 3% !important;
-        flex-direction: column;
+        flex-direction: column !important;
         font-size: 2dvw !important;
     }
     .pages{

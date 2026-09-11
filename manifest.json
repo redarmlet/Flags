@@ -1,0 +1,21 @@
+{
+  "short_name": "Flags",
+  "name": "Flags Game",
+  "icons": [
+    {
+      "src": "images/icon-192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icon-512.webp",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./game.html",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
