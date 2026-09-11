@@ -2,7 +2,7 @@
 
 ** Language / Idioma:** [English](#english) | [Español](#español)
 
-** Play it here / Juégalo aquí:** [redarmlet-flags.netlify.app](https://redarmlet-flags.netlify.app)
+** Play it here / Juégalo aquí:** [redarmlet-flags.pages.dev](https://redarmlet-flags.pages.dev)
 
 ---
 
