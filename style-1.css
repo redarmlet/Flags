@@ -728,6 +728,7 @@ body::after {
 
     .flag-container {
         width: 100dvw !important;
+        bottom: 50% ! important;
     }
     .flag-container img {
         width: 100% !important;
