@@ -330,7 +330,10 @@ const imagePaths = [
   'images/coin.webp', 'images/coin-gif.gif', 'images/flag.gif',
   'images/gem.webp', 'images/gem-on.webp', 'images/help.webp',
   'images/info.png', 'images/logo.webp', 'images/ornament.webp',
-  'images/paper.png', 'images/UI-00.webp'
+  'images/paper.png', 'images/UI-00.webp','images/book-ep1.webp',
+  'images/book-ep2.webp', 'images/book-ep3.webp', 'images/book-ep4.webp',
+  'images/boowebpp5.webp', 'images/book-ep6.webp', 'images/book-ep7.webp',
+  'images/book-ep8.webp', 'images/book-ep9.webp'
 ];
 
 function preloadImages() {
