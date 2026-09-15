@@ -1,200 +1,200 @@
 const countries = [
-    { name: "afghanistan", code: "af", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "albania", code: "al", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "algeria", code: "dz", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "andorra", code: "ad", difficulty: 3, continent: "Europe", classic: "no" },
-    { name: "angola", code: "ao", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "antigua and barbuda", code: "ag", difficulty: 3, continent: "America", classic: "no" },
-    { name: "argentina", code: "ar", difficulty: 1, continent: "America", classic: "yes" },
-    { name: "armenia", code: "am", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "australia", code: "au", difficulty: 1, continent: "Oceania", classic: "yes" },
-    { name: "austria", code: "at", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "azerbaijan", code: "az", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "bahamas", code: "bs", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "bahrain", code: "bh", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "bangladesh", code: "bd", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "barbados", code: "bb", difficulty: 3, continent: "America", classic: "no" },
-    { name: "belarus", code: "by", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "belgium", code: "be", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "belize", code: "bz", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "benin", code: "bj", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "bhutan", code: "bt", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "bolivia", code: "bo", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "bosnia and herzegovina", code: "ba", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "botswana", code: "bw", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "brazil", code: "br", difficulty: 1, continent: "America", classic: "yes" },
-    { name: "brunei", code: "bn", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "bulgaria", code: "bg", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "burkina faso", code: "bf", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "burundi", code: "bi", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "cabo verde", code: "cv", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "cambodia", code: "kh", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "cameroon", code: "cm", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "canada", code: "ca", difficulty: 1, continent: "America", classic: "yes" },
-    { name: "central african republic", code: "cf", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "chad", code: "td", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "chile", code: "cl", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "china", code: "cn", difficulty: 1, continent: "Asia", classic: "yes" },
-    { name: "colombia", code: "co", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "comoros", code: "km", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "congo", code: "cg", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "costa rica", code: "cr", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "croatia", code: "hr", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "cuba", code: "cu", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "cyprus", code: "cy", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "czechia", code: "cz", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "democratic republic of the congo", code: "cd", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "denmark", code: "dk", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "djibouti", code: "dj", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "dominica", code: "dm", difficulty: 3, continent: "America", classic: "no" },
-    { name: "dominican republic", code: "do", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "ecuador", code: "ec", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "egypt", code: "eg", difficulty: 1, continent: "Africa", classic: "yes" },
-    { name: "el salvador", code: "sv", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "equatorial guinea", code: "gq", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "eritrea", code: "er", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "estonia", code: "ee", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "eswatini", code: "sz", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "ethiopia", code: "et", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "fiji", code: "fj", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "finland", code: "fi", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "france", code: "fr", difficulty: 1, continent: "Europe", classic: "yes" },
-    { name: "gabon", code: "ga", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "gambia", code: "gm", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "georgia", code: "ge", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "germany", code: "de", difficulty: 1, continent: "Europe", classic: "yes" },
-    { name: "ghana", code: "gh", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "greece", code: "gr", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "grenada", code: "gd", difficulty: 3, continent: "America", classic: "no" },
-    { name: "guatemala", code: "gt", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "guinea", code: "gn", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "guinea-bissau", code: "gw", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "guyana", code: "gy", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "haiti", code: "ht", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "honduras", code: "hn", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "hungary", code: "hu", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "iceland", code: "is", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "india", code: "in", difficulty: 1, continent: "Asia", classic: "yes" },
-    { name: "indonesia", code: "id", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "iran", code: "ir", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "iraq", code: "iq", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "ireland", code: "ie", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "israel", code: "il", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "italy", code: "it", difficulty: 1, continent: "Europe", classic: "yes" },
-    { name: "ivory coast", code: "ci", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "jamaica", code: "jm", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "japan", code: "jp", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "jordan", code: "jo", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "kazakhstan", code: "kz", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "kenya", code: "ke", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "kiribati", code: "ki", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "kuwait", code: "kw", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "kyrgyzstan", code: "kg", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "laos", code: "la", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "latvia", code: "lv", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "lebanon", code: "lb", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "lesotho", code: "ls", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "liberia", code: "lr", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "libya", code: "ly", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "liechtenstein", code: "li", difficulty: 3, continent: "Europe", classic: "no" },
-    { name: "lithuania", code: "lt", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "luxembourg", code: "lu", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "madagascar", code: "mg", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "malawi", code: "mw", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "malaysia", code: "my", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "maldives", code: "mv", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "mali", code: "ml", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "malta", code: "mt", difficulty: 3, continent: "Europe", classic: "no" },
-    { name: "marshall islands", code: "mh", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "mauritania", code: "mr", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "mauritius", code: "mu", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "mexico", code: "mx", difficulty: 1, continent: "America", classic: "yes" },
-    { name: "micronesia", code: "fm", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "moldova", code: "md", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "monaco", code: "mc", difficulty: 3, continent: "Europe", classic: "no" },
-    { name: "mongolia", code: "mn", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "montenegro", code: "me", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "morocco", code: "ma", difficulty: 2, continent: "Africa", classic: "yes" },
-    { name: "mozambique", code: "mz", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "myanmar", code: "mm", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "namibia", code: "na", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "nauru", code: "nr", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "nepal", code: "np", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "netherlands", code: "nl", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "new zealand", code: "nz", difficulty: 1, continent: "Oceania", classic: "no" },
-    { name: "nicaragua", code: "ni", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "niger", code: "ne", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "nigeria", code: "ng", difficulty: 1, continent: "Africa", classic: "no" },
-    { name: "north korea", code: "kp", difficulty: 2, continent: "Asia", classic: "yes" },
-    { name: "north macedonia", code: "mk", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "norway", code: "no", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "oman", code: "om", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "pakistan", code: "pk", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "palau", code: "pw", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "palestine", code: "ps", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "panama", code: "pa", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "papua new guinea", code: "pg", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "paraguay", code: "py", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "peru", code: "pe", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "philippines", code: "ph", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "poland", code: "pl", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "portugal", code: "pt", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "qatar", code: "qa", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "romania", code: "ro", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "russia", code: "ru", difficulty: 1, continent: "Europe", classic: "yes" },
-    { name: "rwanda", code: "rw", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "saint kitts and nevis", code: "kn", difficulty: 3, continent: "America", classic: "no" },
-    { name: "saint lucia", code: "lc", difficulty: 3, continent: "America", classic: "no" },
-    { name: "saint vincent and the grenadines", code: "vc", difficulty: 3, continent: "America", classic: "no" },
-    { name: "samoa", code: "ws", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "san marino", code: "sm", difficulty: 3, continent: "Europe", classic: "no" },
-    { name: "sao tome and principe", code: "st", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "saudi arabia", code: "sa", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "senegal", code: "sn", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "serbia", code: "rs", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "seychelles", code: "sc", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "sierra leone", code: "sl", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "singapore", code: "sg", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "slovakia", code: "sk", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "slovenia", code: "si", difficulty: 3, continent: "Europe", classic: "yes" },
-    { name: "solomon islands", code: "sb", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "somalia", code: "so", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "south africa", code: "za", difficulty: 1, continent: "Africa", classic: "yes" },
-    { name: "south korea", code: "kr", difficulty: 1, continent: "Asia", classic: "yes" },
-    { name: "south sudan", code: "ss", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "spain", code: "es", difficulty: 1, continent: "Europe", classic: "yes" },
-    { name: "sri lanka", code: "lk", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "sudan", code: "sd", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "suriname", code: "sr", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "sweden", code: "se", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "switzerland", code: "ch", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "syria", code: "sy", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "taiwan", code: "tw", difficulty: 2, continent: "Asia", classic: "no" },
-    { name: "tajikistan", code: "tj", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "tanzania", code: "tz", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "thailand", code: "th", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "timor-leste", code: "tl", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "togo", code: "tg", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "tonga", code: "to", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "trinidad and tobago", code: "tt", difficulty: 3, continent: "America", classic: "yes" },
-    { name: "tunisia", code: "tn", difficulty: 2, continent: "Africa", classic: "no" },
-    { name: "turkey", code: "tr", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "turkmenistan", code: "tm", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "tuvalu", code: "tv", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "uganda", code: "ug", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "ukraine", code: "ua", difficulty: 2, continent: "Europe", classic: "yes" },
-    { name: "united arab emirates", code: "ae", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "united kingdom", code: "gb", difficulty: 1, continent: "Europe", classic: "yes" },
-    { name: "united states", code: "us", difficulty: 1, continent: "America", classic: "yes" },
-    { name: "uruguay", code: "uy", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "uzbekistan", code: "uz", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "vanuatu", code: "vu", difficulty: 3, continent: "Oceania", classic: "no" },
-    { name: "vatican city", code: "va", difficulty: 3, continent: "Europe", classic: "no" },
-    { name: "venezuela", code: "ve", difficulty: 2, continent: "America", classic: "yes" },
-    { name: "vietnam", code: "vn", difficulty: 1, continent: "Asia", classic: "no" },
-    { name: "yemen", code: "ye", difficulty: 3, continent: "Asia", classic: "no" },
-    { name: "zambia", code: "zm", difficulty: 3, continent: "Africa", classic: "no" },
-    { name: "zimbabwe", code: "zw", difficulty: 3, continent: "Africa", classic: "no" }
+    { name: "afghanistan", nombre: "Afganistán", code: "af", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "albania", nombre: "Albania", code: "al", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "algeria", nombre: "Argelia", code: "dz", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "andorra", nombre: "Andorra", code: "ad", difficulty: 3, continent: "Europe", classic: "no" },
+    { name: "angola", nombre: "Angola", code: "ao", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "antigua and barbuda", nombre: "Antigua y Barbuda", code: "ag", difficulty: 3, continent: "America", classic: "no" },
+    { name: "argentina", nombre: "Argentina", code: "ar", difficulty: 1, continent: "America", classic: "yes" },
+    { name: "armenia", nombre: "Armenia", code: "am", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "australia", nombre: "Australia", code: "au", difficulty: 1, continent: "Oceania", classic: "yes" },
+    { name: "austria", nombre: "Austria", code: "at", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "azerbaijan", nombre: "Azerbaiyán", code: "az", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "bahamas", nombre: "Bahamas", code: "bs", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "bahrain", nombre: "Baréin", code: "bh", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "bangladesh", nombre: "Bangladés", code: "bd", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "barbados", nombre: "Barbados", code: "bb", difficulty: 3, continent: "America", classic: "no" },
+    { name: "belarus", nombre: "Bielorrusia", code: "by", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "belgium", nombre: "Bélgica", code: "be", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "belize", nombre: "Belice", code: "bz", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "benin", nombre: "Benín", code: "bj", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "bhutan", nombre: "Bután", code: "bt", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "bolivia", nombre: "Bolivia", code: "bo", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "bosnia and herzegovina", nombre: "Bosnia y Herzegovina", code: "ba", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "botswana", nombre: "Botsuana", code: "bw", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "brazil", nombre: "Brasil", code: "br", difficulty: 1, continent: "America", classic: "yes" },
+    { name: "brunei", nombre: "Brunéi", code: "bn", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "bulgaria", nombre: "Bulgaria", code: "bg", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "burkina faso", nombre: "Burkina Faso", code: "bf", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "burundi", nombre: "Burundi", code: "bi", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "cabo verde", nombre: "Cabo Verde", code: "cv", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "cambodia", nombre: "Camboya", code: "kh", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "cameroon", nombre: "Camerún", code: "cm", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "canada", nombre: "Canadá", code: "ca", difficulty: 1, continent: "America", classic: "yes" },
+    { name: "central african republic", nombre: "República Centroafricana", code: "cf", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "chad", nombre: "Chad", code: "td", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "chile", nombre: "Chile", code: "cl", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "china", nombre: "China", code: "cn", difficulty: 1, continent: "Asia", classic: "yes" },
+    { name: "colombia", nombre: "Colombia", code: "co", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "comoros", nombre: "Comoras", code: "km", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "congo", nombre: "Congo", code: "cg", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "costa rica", nombre: "Costa Rica", code: "cr", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "croatia", nombre: "Croacia", code: "hr", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "cuba", nombre: "Cuba", code: "cu", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "cyprus", nombre: "Chipre", code: "cy", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "czechia", nombre: "Chequia", code: "cz", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "democratic republic of the congo", nombre: "República Democrática del Congo", code: "cd", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "denmark", nombre: "Dinamarca", code: "dk", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "djibouti", nombre: "Yibuti", code: "dj", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "dominica", nombre: "Dominica", code: "dm", difficulty: 3, continent: "America", classic: "no" },
+    { name: "dominican republic", nombre: "República Dominicana", code: "do", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "ecuador", nombre: "Ecuador", code: "ec", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "egypt", nombre: "Egipto", code: "eg", difficulty: 1, continent: "Africa", classic: "yes" },
+    { name: "el salvador", nombre: "El Salvador", code: "sv", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "equatorial guinea", nombre: "Guinea Ecuatorial", code: "gq", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "eritrea", nombre: "Eritrea", code: "er", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "estonia", nombre: "Estonia", code: "ee", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "eswatini", nombre: "Esuatini", code: "sz", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "ethiopia", nombre: "Etiopía", code: "et", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "fiji", nombre: "Fiyi", code: "fj", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "finland", nombre: "Finlandia", code: "fi", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "france", nombre: "Francia", code: "fr", difficulty: 1, continent: "Europe", classic: "yes" },
+    { name: "gabon", nombre: "Gabón", code: "ga", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "gambia", nombre: "Gambia", code: "gm", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "georgia", nombre: "Georgia", code: "ge", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "germany", nombre: "Alemania", code: "de", difficulty: 1, continent: "Europe", classic: "yes" },
+    { name: "ghana", nombre: "Ghana", code: "gh", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "greece", nombre: "Grecia", code: "gr", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "grenada", nombre: "Granada", code: "gd", difficulty: 3, continent: "America", classic: "no" },
+    { name: "guatemala", nombre: "Guatemala", code: "gt", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "guinea", nombre: "Guinea", code: "gn", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "guinea-bissau", nombre: "Guinea-Bisáu", code: "gw", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "guyana", nombre: "Guyana", code: "gy", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "haiti", nombre: "Haití", code: "ht", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "honduras", nombre: "Honduras", code: "hn", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "hungary", nombre: "Hungría", code: "hu", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "iceland", nombre: "Islandia", code: "is", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "india", nombre: "India", code: "in", difficulty: 1, continent: "Asia", classic: "yes" },
+    { name: "indonesia", nombre: "Indonesia", code: "id", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "iran", nombre: "Irán", code: "ir", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "iraq", nombre: "Irak", code: "iq", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "ireland", nombre: "Irlanda", code: "ie", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "israel", nombre: "Israel", code: "il", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "italy", nombre: "Italia", code: "it", difficulty: 1, continent: "Europe", classic: "yes" },
+    { name: "ivory coast", nombre: "Costa de Marfil", code: "ci", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "jamaica", nombre: "Jamaica", code: "jm", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "japan", nombre: "Japón", code: "jp", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "jordan", nombre: "Jordania", code: "jo", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "kazakhstan", nombre: "Kazajistán", code: "kz", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "kenya", nombre: "Kenia", code: "ke", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "kiribati", nombre: "Kiribati", code: "ki", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "kuwait", nombre: "Kuwait", code: "kw", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "kyrgyzstan", nombre: "Kirguistán", code: "kg", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "laos", nombre: "Laos", code: "la", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "latvia", nombre: "Letonia", code: "lv", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "lebanon", nombre: "Líbano", code: "lb", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "lesotho", nombre: "Lesoto", code: "ls", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "liberia", nombre: "Liberia", code: "lr", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "libya", nombre: "Libia", code: "ly", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "liechtenstein", nombre: "Liechtenstein", code: "li", difficulty: 3, continent: "Europe", classic: "no" },
+    { name: "lithuania", nombre: "Lituania", code: "lt", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "luxembourg", nombre: "Luxemburgo", code: "lu", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "madagascar", nombre: "Madagascar", code: "mg", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "malawi", nombre: "Malaui", code: "mw", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "malaysia", nombre: "Malasia", code: "my", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "maldives", nombre: "Maldivas", code: "mv", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "mali", nombre: "Malí", code: "ml", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "malta", nombre: "Malta", code: "mt", difficulty: 3, continent: "Europe", classic: "no" },
+    { name: "marshall islands", nombre: "Islas Marshall", code: "mh", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "mauritania", nombre: "Mauritania", code: "mr", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "mauritius", nombre: "Mauricio", code: "mu", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "mexico", nombre: "México", code: "mx", difficulty: 1, continent: "America", classic: "yes" },
+    { name: "micronesia", nombre: "Micronesia", code: "fm", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "moldova", nombre: "Moldavia", code: "md", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "monaco", nombre: "Mónaco", code: "mc", difficulty: 3, continent: "Europe", classic: "no" },
+    { name: "mongolia", nombre: "Mongolia", code: "mn", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "montenegro", nombre: "Montenegro", code: "me", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "morocco", nombre: "Marruecos", code: "ma", difficulty: 2, continent: "Africa", classic: "yes" },
+    { name: "mozambique", nombre: "Mozambique", code: "mz", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "myanmar", nombre: "Myanmar", code: "mm", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "namibia", nombre: "Namibia", code: "na", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "nauru", nombre: "Nauru", code: "nr", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "nepal", nombre: "Nepal", code: "np", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "netherlands", nombre: "Países Bajos", code: "nl", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "new zealand", nombre: "Nueva Zelanda", code: "nz", difficulty: 1, continent: "Oceania", classic: "no" },
+    { name: "nicaragua", nombre: "Nicaragua", code: "ni", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "niger", nombre: "Níger", code: "ne", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "nigeria", nombre: "Nigeria", code: "ng", difficulty: 1, continent: "Africa", classic: "no" },
+    { name: "north korea", nombre: "Corea del Norte", code: "kp", difficulty: 2, continent: "Asia", classic: "yes" },
+    { name: "north macedonia", nombre: "Macedonia del Norte", code: "mk", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "norway", nombre: "Noruega", code: "no", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "oman", nombre: "Omán", code: "om", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "pakistan", nombre: "Pakistán", code: "pk", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "palau", nombre: "Palaos", code: "pw", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "palestine", nombre: "Palestina", code: "ps", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "panama", nombre: "Panamá", code: "pa", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "papua new guinea", nombre: "Papúa Nueva Guinea", code: "pg", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "paraguay", nombre: "Paraguay", code: "py", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "peru", nombre: "Perú", code: "pe", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "philippines", nombre: "Filipinas", code: "ph", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "poland", nombre: "Polonia", code: "pl", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "portugal", nombre: "Portugal", code: "pt", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "qatar", nombre: "Catar", code: "qa", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "romania", nombre: "Rumania", code: "ro", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "russia", nombre: "Rusia", code: "ru", difficulty: 1, continent: "Europe", classic: "yes" },
+    { name: "rwanda", nombre: "Ruanda", code: "rw", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "saint kitts and nevis", nombre: "San Cristóbal y Nieves", code: "kn", difficulty: 3, continent: "America", classic: "no" },
+    { name: "saint lucia", nombre: "Santa Lucía", code: "lc", difficulty: 3, continent: "America", classic: "no" },
+    { name: "saint vincent and the grenadines", nombre: "San Vicente y las Granadinas", code: "vc", difficulty: 3, continent: "America", classic: "no" },
+    { name: "samoa", nombre: "Samoa", code: "ws", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "san marino", nombre: "San Marino", code: "sm", difficulty: 3, continent: "Europe", classic: "no" },
+    { name: "sao tome and principe", nombre: "Santo Tomé y Príncipe", code: "st", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "saudi arabia", nombre: "Arabia Saudita", code: "sa", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "senegal", nombre: "Senegal", code: "sn", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "serbia", nombre: "Serbia", code: "rs", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "seychelles", nombre: "Seychelles", code: "sc", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "sierra leone", nombre: "Sierra Leona", code: "sl", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "singapore", nombre: "Singapur", code: "sg", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "slovakia", nombre: "Eslovaquia", code: "sk", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "slovenia", nombre: "Eslovenia", code: "si", difficulty: 3, continent: "Europe", classic: "yes" },
+    { name: "solomon islands", nombre: "Islas Salomón", code: "sb", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "somalia", nombre: "Somalia", code: "so", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "south africa", nombre: "Sudáfrica", code: "za", difficulty: 1, continent: "Africa", classic: "yes" },
+    { name: "south korea", nombre: "Corea del Sur", code: "kr", difficulty: 1, continent: "Asia", classic: "yes" },
+    { name: "south sudan", nombre: "Sudán del Sur", code: "ss", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "spain", nombre: "España", code: "es", difficulty: 1, continent: "Europe", classic: "yes" },
+    { name: "sri lanka", nombre: "Sri Lanka", code: "lk", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "sudan", nombre: "Sudán", code: "sd", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "suriname", nombre: "Surinam", code: "sr", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "sweden", nombre: "Suecia", code: "se", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "switzerland", nombre: "Suiza", code: "ch", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "syria", nombre: "Siria", code: "sy", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "taiwan", nombre: "Taiwán", code: "tw", difficulty: 2, continent: "Asia", classic: "no" },
+    { name: "tajikistan", nombre: "Tayikistán", code: "tj", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "tanzania", nombre: "Tanzania", code: "tz", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "thailand", nombre: "Tailandia", code: "th", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "timor-leste", nombre: "Timor Oriental", code: "tl", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "togo", nombre: "Togo", code: "tg", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "tonga", nombre: "Tonga", code: "to", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "trinidad and tobago", nombre: "Trinidad y Tobago", code: "tt", difficulty: 3, continent: "America", classic: "yes" },
+    { name: "tunisia", nombre: "Túnez", code: "tn", difficulty: 2, continent: "Africa", classic: "no" },
+    { name: "turkey", nombre: "Turquía", code: "tr", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "turkmenistan", nombre: "Turkmenistán", code: "tm", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "tuvalu", nombre: "Tuvalu", code: "tv", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "uganda", nombre: "Uganda", code: "ug", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "ukraine", nombre: "Ucrania", code: "ua", difficulty: 2, continent: "Europe", classic: "yes" },
+    { name: "united arab emirates", nombre: "Emiratos Árabes Unidos", code: "ae", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "united kingdom", nombre: "Reino Unido", code: "gb", difficulty: 1, continent: "Europe", classic: "yes" },
+    { name: "united states", nombre: "Estados Unidos", code: "us", difficulty: 1, continent: "America", classic: "yes" },
+    { name: "uruguay", nombre: "Uruguay", code: "uy", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "uzbekistan", nombre: "Uzbekistán", code: "uz", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "vanuatu", nombre: "Vanuatu", code: "vu", difficulty: 3, continent: "Oceania", classic: "no" },
+    { name: "vatican city", nombre: "Ciudad del Vaticano", code: "va", difficulty: 3, continent: "Europe", classic: "no" },
+    { name: "venezuela", nombre: "Venezuela", code: "ve", difficulty: 2, continent: "America", classic: "yes" },
+    { name: "vietnam", nombre: "Vietnam", code: "vn", difficulty: 1, continent: "Asia", classic: "no" },
+    { name: "yemen", nombre: "Yemen", code: "ye", difficulty: 3, continent: "Asia", classic: "no" },
+    { name: "zambia", nombre: "Zambia", code: "zm", difficulty: 3, continent: "Africa", classic: "no" },
+    { name: "zimbabwe", nombre: "Zimbabue", code: "zw", difficulty: 3, continent: "Africa", classic: "no" }
 ];
 
 let score = 0;
@@ -209,6 +209,7 @@ let currentCountry = null;
 let availableCountries = [];
 let Reebot = false;
 let shut = false;
+let en = true;
 
 const btnPlay = document.getElementById('btn-play');
 const flagImg = document.getElementById('flag-display');
@@ -249,6 +250,8 @@ const btnAS = document.getElementById('book-as-btn');
 const btnEU = document.getElementById('book-eu-btn');
 const btnOC = document.getElementById('book-oc-btn');
 const btnCloseBook = document.getElementById('book-close-btn');
+const btnEn = document.getElementById('btn-en');
+const btnEs = document.getElementById('btn-es');
 
 const music = document.getElementById('audio');
 const AudioC = document.getElementById('correct');
@@ -291,6 +294,8 @@ btnAS.addEventListener('click', () => { actualPage = 5; changePage(); });
 btnEU.addEventListener('click', () => { actualPage = 7; changePage(); });
 btnOC.addEventListener('click', () => { actualPage = 9; changePage(); });
 btnCloseBook.addEventListener('click', closeBook);
+btnEs.addEventListener('click', espanol);
+btnEn.addEventListener('click', english);
 
 music.defaultVolume = 0.8; 
 AudioC.defaultVolume = 0.2;
@@ -343,6 +348,7 @@ function preloadImages() {
     closeLoading();
     
   });
+  english();
 }
 
 document.addEventListener('DOMContentLoaded', preloadImages);
@@ -368,68 +374,134 @@ function shutAudio(){
 
 
 function changePage(){
-    if (actualPage === 1){
-        bookPage.src = 'images/book-p1.png';
-        btnBackBook.style.opacity = 0;
-        btnBackBook.style.pointerEvents = 'none';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 2){
-        bookPage.src = 'images/book-p2.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 3){
-        bookPage.src = 'images/book-p3.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 4){
-        bookPage.src = 'images/book-p4.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 5){
-        bookPage.src = 'images/book-p5.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 6){
-        bookPage.src = 'images/book-p6.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 7){
-        bookPage.src = 'images/book-p7.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 8){
-        bookPage.src = 'images/book-p8.png';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
-        btnNextBook.style.opacity = 1;
-        btnNextBook.style.pointerEvents = 'inherit';
-    }
-    else if (actualPage === 9){
-        bookPage.src = 'images/book-p9.png';
-        btnNextBook.style.opacity = 0;
-        btnNextBook.style.pointerEvents = 'none';
-        btnBackBook.style.opacity = 1;
-        btnBackBook.style.pointerEvents = 'inherit';
+    if (en){
+        if (actualPage === 1){
+            bookPage.src = 'images/book-p1.png';
+            btnBackBook.style.opacity = 0;
+            btnBackBook.style.pointerEvents = 'none';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 2){
+            bookPage.src = 'images/book-p2.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 3){
+            bookPage.src = 'images/book-p3.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 4){
+            bookPage.src = 'images/book-p4.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 5){
+            bookPage.src = 'images/book-p5.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 6){
+            bookPage.src = 'images/book-p6.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 7){
+            bookPage.src = 'images/book-p7.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 8){
+            bookPage.src = 'images/book-p8.png';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 9){
+            bookPage.src = 'images/book-p9.png';
+            btnNextBook.style.opacity = 0;
+            btnNextBook.style.pointerEvents = 'none';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+        }
+    }else{
+        if (actualPage === 1){
+            bookPage.src = 'images/book-ep1.webp';
+            btnBackBook.style.opacity = 0;
+            btnBackBook.style.pointerEvents = 'none';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 2){
+            bookPage.src = 'images/book-ep2.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 3){
+            bookPage.src = 'images/book-ep3.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 4){
+            bookPage.src = 'images/book-ep4.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 5){
+            bookPage.src = 'images/book-ep5.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 6){
+            bookPage.src = 'images/book-ep6.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 7){
+            bookPage.src = 'images/book-ep7.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 8){
+            bookPage.src = 'images/book-ep8.webp';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+            btnNextBook.style.opacity = 1;
+            btnNextBook.style.pointerEvents = 'inherit';
+        }
+        else if (actualPage === 9){
+            bookPage.src = 'images/book-ep9.webp';
+            btnNextBook.style.opacity = 0;
+            btnNextBook.style.pointerEvents = 'none';
+            btnBackBook.style.opacity = 1;
+            btnBackBook.style.pointerEvents = 'inherit';
+        }
     }
 }
 function nextPage(){
@@ -460,6 +532,25 @@ function toggleLoading(){
         openLoading();
     }
 }
+function espanol(){
+    en = false;
+    changePage();
+    btnEs.querySelector('img').style.filter = 'sepia(0)';
+    btnEs.querySelector('img').style.transform = 'scale(1.2)';
+
+    btnEn.querySelector('img').style.filter = 'sepia(100)';
+    btnEn.querySelector('img').style.transform = 'scale(1)';
+}
+function english(){
+    en = true;
+    changePage();
+    btnEs.querySelector('img').style.filter = 'sepia(100)';
+    btnEs.querySelector('img').style.transform = 'scale(1)';
+
+    btnEn.querySelector('img').style.filter = 'sepia(0)';
+    btnEn.querySelector('img').style.transform = 'scale(1.2)';
+}
+
 musicRange.addEventListener('input', function(){
     const range = parseInt(musicRange.value, 10);
     music.volume = music.defaultVolume * (range / 10);
@@ -842,9 +933,14 @@ function cleanText(text) {
 
 function checkAnswer() {
     const userAnswer = cleanText(inputCountry.value);
-    const correctAnswer = cleanText(currentCountry.name);
+    let correctAnswer = "";
 
-    
+    if(en){
+        correctAnswer = cleanText(currentCountry.name);
+    }else{
+        correctAnswer = cleanText(currentCountry.nombre);
+    }
+
     if (userAnswer === correctAnswer) {
 
         banderasCorrectas++;

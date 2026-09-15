@@ -34,41 +34,56 @@
             <div id="menu-1">
                 <img src="images/paper.png" id="info" alt="info">
                 <div id="m-main">
-                    <p>COUNTRIES SELECTION:</p>
-                    <div class="checkboxes">
-                        <div>
-                            <input type="checkbox" name="Classic" id="cb-classic" checked>
-                            <label for="Classic">CLASSIC</label>
+                    <div class="flex">
+                        
+                        <div class="languages">
+                            <p>LANGUAGE :</p>
+                            <div>
+                                <button class="language-btn" id="btn-en"><img src="images/en.webp"></img></button>
+                                <button class="language-btn" id="btn-es"><img src="images/es.webp"></img></button>
+                            </div>
                         </div>
-                        <div class="cb-continent">
+                        
+                        <div class="checkboxes">
+                            <p>COUNTRIES SELECTION:</p>
                             <div>
-                                <input type="checkbox" name="Africa" id="cb-africa">
-                                <label for="Africa">AFRICA</label>
+                                <input type="checkbox" name="Classic" id="cb-classic" checked>
+                                <label for="Classic">CLASSIC</label>
                             </div>
-                            <div>
-                                <input type="checkbox" name="America" id="cb-america">
-                                <label for="America">AMERICA</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="Asia" id="cb-asia">
-                                <label for="Asia">ASIA</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="Europe" id="cb-europe">
-                                <label for="Europe">EUROPE</label>
-                            </div>
+                            <div class="cb-continent">
+                                <div>
+                                    <input type="checkbox" name="Africa" id="cb-africa">
+                                    <label for="Africa">AFRICA</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="America" id="cb-america">
+                                    <label for="America">AMERICA</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="Asia" id="cb-asia">
+                                    <label for="Asia">ASIA</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="Europe" id="cb-europe">
+                                    <label for="Europe">EUROPE</label>
+                                </div>
 
-                            <div>
-                                <input type="checkbox" name="Oceania" id="cb-oceania">
-                                <label for="Oceania">OCEANIA</label>
+                                <div>
+                                    <input type="checkbox" name="Oceania" id="cb-oceania">
+                                    <label for="Oceania">OCEANIA</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <p> </p>
-                    <button     class="m1-btn"      id="btn-htp">HOW TO PLAY</button>
-                    <button     class="m1-btn"      id="btn-controls">CONTROLS</button>
-                    <button     class="m1-btn"      id="btn-sound">SOUND</button>
-                    <button     class="m1-btn"      id="btn-back">BACK TO GAME</button>
+                    <div class="flex">
+                        <p> </p>
+                        <button     class="m1-btn"      id="btn-htp">HOW TO PLAY</button>
+                        <button     class="m1-btn"      id="btn-controls">CONTROLS</button>
+                        <button     class="m1-btn"      id="btn-sound">SOUND</button>
+                        <p> </p>
+                        <button     class="m1-btn"      id="btn-back">BACK TO GAME</button>
+                    </div>
+                    
                 </div>
                 <div id="m-htp">
                     <div>
@@ -135,7 +150,7 @@
             <button id="btn-info"><img src="images/help.webp" alt="?"></button>
             
 
-            <div class="1">
+            <div class="scoreboard">
                 <span>LIVES: <span          id="lives">3</span></span>
                 <span>SCORE: <span          id="score">0</span></span>
                 <span>HIGH SCORE: <span     id="high-score">000000</span></span>

@@ -155,8 +155,8 @@ body {
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100vw;
-                height: 100vh;
+                width: 100dvw;
+                height: 100dvh;
 
                 display: flex;
                 justify-content: center;
@@ -196,7 +196,7 @@ body {
                 #info {
                     z-index: 110;
                     position: absolute;
-                    width: 50%;
+                    width: 60%;
                     height: auto;
                     display: block;
                     top: 50%;
@@ -204,6 +204,26 @@ body {
                     transform: translate(-50%, -50%);
                     opacity: inherit;
                     pointer-events: inherit;
+                }
+                .flex{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .languages{
+                    display: flex;
+                    align-items: center;
+                    .language-btn{
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        padding-left: 1dvw;
+
+                        img{
+                            width: 80%;
+                            transition: all .1s ease-in;
+                        }
+                    }
                 }
                 #m-main {
                     position: absolute;
@@ -218,6 +238,7 @@ body {
                     opacity: 1;
                     pointer-events: inherit;
                     padding: 0%;
+                    
                     .m1-btn{
                         font-size: 1vw;
                         background: none;
@@ -372,7 +393,7 @@ body {
                 position: absolute;
                 width: 55vw;
                 left: 50%;
-                bottom: 60%;
+                top: 40%;
                 transform: translate(-50%, 50%);
                 display: block;
                 pointer-events: none;
@@ -487,7 +508,7 @@ body {
                     width: 65%;
                     opacity: inherit;
                     pointer-events: inherit;
-
+                    user-select: none;
                     #book-close-btn{
                         width: 3%;
                         height: 3%;
@@ -728,6 +749,7 @@ body::after {
 
     .flag-container {
         width: 100dvw !important;
+        bottom: 50% !important;
     }
     .flag-container img {
         width: 100% !important;
@@ -755,6 +777,7 @@ body::after {
         font-size: 4dvw !important;
     }
     #m-main {
+        margin-top: -7vh !important;
         width: 90dvw !important;
         height: 100dvw !important;
         .m1-btn{
@@ -798,5 +821,11 @@ body::after {
     }
     .pages{
         width: 100% !important;
+    }
+    #btn-htp{
+        display: none;
+    }
+    #btn-controls{
+        display: none;
     }
 }
